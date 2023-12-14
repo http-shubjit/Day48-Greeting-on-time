@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Bassed Greeting</title>
+    <script src="https://kit.fontawesome.com/ad618d076d.js" crossorigin="anonymous"></script>
+
+   <style>
+    * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #ae9cff;
+}
+.container {
+  font-size: 1.3em;
+  width: 25em;
+  background: linear-gradient(-240deg, #8468ff 70%, #785bf7 70%);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 4.5em 1.3em;
+  border-radius: 0.4em;
+  box-shadow: 0 1.3em 1.8em rgba(94, 72, 181, 0.25);
+}
+.container h1 {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  word-spacing: 0.4em;
+}
+a{
+    position: absolute;
+    left: 45%;
+    top: 70%;
+    text-decoration: none;
+    color:rgb(253, 49, 118);
+    cursor: pointer;
+    height: 60px;
+    width: 120px;
+    margin-left: 40px;
+}
+
+   </style>
+   
+  </head>
+  <body>
+    <div class="container">DEMO TEXT</div>
+    <a href="https://www.instagram.com/shubjit.02x/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">Follow On <i class="fa-brands fa-instagram"></i></a>
+   
+    <script>
+let container = document.querySelector(".container");
+let timeNow = new Date().getHours();
+console.log(timeNow)
+let greeting = timeNow >= 5 && timeNow < 12 ? "Good Morning": timeNow >= 12 && timeNow < 18 ? "Good Afternoon": "Good evening";
+container.innerHTML = `<h1>${greeting}</h1>`;
+    </script>
+  </body>
+</html>
